@@ -460,7 +460,7 @@
     }
     
     function drawBreathingPacer() {
-      if (!settings.showBreathing) return;
+      if (!settings.showBreathing || settings.isPaused) return;
       const pCanvas = document.getElementById('breathingPacer');
       const pCtx = pCanvas.getContext('2d');
       const size = 400, cx = size / 2, cy = size / 2;
